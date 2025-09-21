@@ -1,0 +1,13 @@
+{
+  "obsidianVaultPath": "~/Documents/ObsidianVault",
+  "excludePatterns": [
+    ".obsidian/**",
+    "*.tmp",
+    "*.bak",
+    ".trash/**",
+    "node_modules/**",
+    ".git/**"
+  ],
+  "maxSearchResults": 20,
+  "enableIndexing": true
+}

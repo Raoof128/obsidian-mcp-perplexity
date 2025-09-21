@@ -1,0 +1,21 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+*.tmp
+*.bak
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# Config files (keep templates)
+config.json
+!config/default.json
