@@ -18,7 +18,7 @@ class ObsidianMCPSetup {
   }
 
   async run() {
-    console.log('🚀 Setting up Obsidian MCP for Perplexity...\n');
+    console.log('🚀 Setting up Obsidian MCP Server...\n');
 
     try {
       await this.checkNodeVersion();
@@ -26,7 +26,7 @@ class ObsidianMCPSetup {
       await this.promptForVaultPath();
       await this.installDependencies();
       await this.buildProject();
-      await this.generatePerplexityConfig();
+      await this.generateMCPConfig();
       await this.showCompletionInstructions();
     } catch (error) {
       console.error('❌ Setup failed:', error.message);
@@ -152,10 +152,10 @@ class ObsidianMCPSetup {
     }
   }
 
-  async generatePerplexityConfig() {
+  async generateMCPConfig() {
     const serverPath = path.join(this.projectRoot, 'dist', 'index.js');
 
-    const perplexityConfig = {
+    const mcpConfig = {
       name: "obsidian-vault",
       description: "Access and search your Obsidian vault",
       command: `node ${serverPath}`,
@@ -164,10 +164,10 @@ class ObsidianMCPSetup {
       }
     };
 
-    const perplexityConfigFile = path.join(this.configDir, 'perplexity-config.json');
-    await fs.writeFile(perplexityConfigFile, JSON.stringify(perplexityConfig, null, 2));
+    const mcpConfigFile = path.join(this.configDir, 'mcp-config.json');
+    await fs.writeFile(mcpConfigFile, JSON.stringify(mcpConfig, null, 2));
 
-    console.log(`✅ Perplexity configuration generated: ${perplexityConfigFile}`);
+    console.log(`✅ MCP configuration generated: ${mcpConfigFile}`);
   }
 
   async showCompletionInstructions() {
@@ -176,8 +176,8 @@ class ObsidianMCPSetup {
     console.log('\n🎉 Setup completed successfully!\n');
 
     console.log('📋 Next Steps:');
-    console.log('1. Open Perplexity settings');
-    console.log('2. Navigate to Model Context Protocol (MCP) section');
+    console.log('1. Open Claude Desktop settings');
+    console.log('2. Navigate to Developer tab');
     console.log('3. Add a new MCP server with these settings:');
     console.log('   ┌─────────────────────────────────────────────────────────┐');
     console.log('   │ Name: obsidian-vault                                   │');
@@ -185,7 +185,7 @@ class ObsidianMCPSetup {
     console.log(`   │ Environment: OBSIDIAN_MCP_CONFIG=${this.configFile}`);
     console.log('   └─────────────────────────────────────────────────────────┘\n');
 
-    console.log('🧪 Test Commands (once configured in Perplexity):');
+    console.log('🧪 Test Commands (once configured in Claude Desktop):');
     console.log('• "Search my Obsidian vault for productivity tips"');
     console.log('• "Show me my vault statistics"');
     console.log('• "List my 10 most recent notes"');
@@ -197,7 +197,7 @@ class ObsidianMCPSetup {
 
     console.log('📁 Config Files:');
     console.log(`• Main config: ${this.configFile}`);
-    console.log(`• Perplexity config: ${path.join(this.configDir, 'perplexity-config.json')}\n`);
+    console.log(`• MCP config: ${path.join(this.configDir, 'mcp-config.json')}\n`);
 
     console.log('🆘 Need help? Check the documentation in the docs/ folder');
   }

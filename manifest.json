@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "name": "obsidian-mcp-server",
+  "displayName": "Obsidian Vault MCP Server",
+  "description": "Advanced Obsidian vault integration for Claude Desktop. Features fuzzy search, note creation/editing, tag-based filtering, vault analytics, and comprehensive knowledge management tools.",
+  "publisher": "Obsidian MCP Community",
+  "license": "MIT",
+  "homepage": "https://github.com/Raoof128/obsidian-mcp-perplexity",
+  "repository": "https://github.com/Raoof128/obsidian-mcp-perplexity",
+  "keywords": [
+    "obsidian",
+    "notes",
+    "knowledge-management",
+    "search",
+    "mcp",
+    "vault"
+  ],
+  "categories": [
+    "productivity",
+    "knowledge-management"
+  ],
+  "icon": "icon.png",
+  "server": {
+    "type": "stdio",
+    "command": "node",
+    "args": ["dist/index.js"]
+  },
+  "configuration": {
+    "obsidianVaultPath": {
+      "type": "string",
+      "description": "Path to your Obsidian vault directory",
+      "required": true,
+      "default": "~/Documents/ObsidianVault"
+    },
+    "maxSearchResults": {
+      "type": "number",
+      "description": "Maximum number of search results to return",
+      "required": false,
+      "default": 20,
+      "minimum": 1,
+      "maximum": 100
+    },
+    "enableIndexing": {
+      "type": "boolean",
+      "description": "Enable indexing for faster searches",
+      "required": false,
+      "default": true
+    },
+    "excludePatterns": {
+      "type": "array",
+      "description": "File patterns to exclude from searches",
+      "required": false,
+      "default": [
+        ".obsidian/**",
+        "*.tmp",
+        "*.bak",
+        ".trash/**",
+        "node_modules/**",
+        ".git/**"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "capabilities": {
+    "tools": {
+      "search_notes": "Advanced fuzzy search with tag filtering and date ranges",
+      "get_vault_stats": "Comprehensive vault analytics and statistics",
+      "get_note_content": "Read full note content with metadata",
+      "list_recent_notes": "List recently modified notes with previews",
+      "get_note_links": "Analyze note connections and backlinks",
+      "create_note": "Create new notes with content, tags and frontmatter",
+      "update_note": "Update existing notes with append/replace options",
+      "search_by_tags": "Tag-based search with usage statistics",
+      "analyze_vault_structure": "Deep vault analysis with orphan detection"
+    }
+  }
+}

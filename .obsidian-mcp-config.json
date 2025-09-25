@@ -1,0 +1,13 @@
+{
+  "obsidianVaultPath": "/Users/raoof.r12/Library/Mobile Documents/iCloud~md~obsidian/Documents",
+  "excludePatterns": [
+    ".obsidian/**",
+    "*.tmp",
+    "*.bak",
+    ".trash/**",
+    "node_modules/**",
+    ".git/**"
+  ],
+  "maxSearchResults": 20,
+  "enableIndexing": true
+}

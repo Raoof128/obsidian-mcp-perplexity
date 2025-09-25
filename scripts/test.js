@@ -243,9 +243,9 @@ class ObsidianMCPTester {
     console.log(`Total: ${results.length} | Passed: ${passed} | Failed: ${failed}`);
 
     if (failed === 0) {
-      console.log('\n🎉 All tests passed! Your MCP server is ready for Perplexity.');
+      console.log('\n🎉 All tests passed! Your MCP server is ready for Claude Desktop.');
       console.log('\n📋 Next Steps:');
-      console.log('1. Add the server to Perplexity MCP settings');
+      console.log('1. Add the server to Claude Desktop MCP settings');
       console.log('2. Use these test queries:');
       console.log('   • "Search my vault for productivity"');
       console.log('   • "Show my vault statistics"');

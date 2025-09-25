@@ -1,7 +1,7 @@
 {
   "name": "obsidian-mcp-perplexity",
   "version": "1.0.0",
-  "description": "Perplexity-compatible MCP server for Obsidian vault integration",
+  "description": "MCP server for Obsidian vault integration with Claude Desktop",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
@@ -13,6 +13,8 @@
     "dev": "tsc --watch",
     "install-global": "npm run build && npm install -g .",
     "setup": "node scripts/setup.js",
+    "setup-claude-desktop": "node scripts/setup-claude-desktop.js",
+    "build-extension": "node scripts/build-extension.js",
     "test": "node scripts/test.js"
   },
   "dependencies": {
@@ -28,7 +30,7 @@
   "keywords": [
     "mcp",
     "obsidian",
-    "perplexity",
+    "claude-desktop",
     "model-context-protocol",
     "ai",
     "knowledge-management"
@@ -37,10 +39,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/obsidian-mcp-perplexity.git"
+    "url": "https://github.com/Raoof128/obsidian-mcp-perplexity.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/obsidian-mcp-perplexity/issues"
+    "url": "https://github.com/Raoof128/obsidian-mcp-perplexity/issues"
   },
-  "homepage": "https://github.com/yourusername/obsidian-mcp-perplexity#readme"
+  "homepage": "https://github.com/Raoof128/obsidian-mcp-perplexity#readme"
 }
