@@ -168,7 +168,7 @@ If you see "Cannot connect to MCP server" on Windows, update your configuration 
   "mcpServers": {
     "obsidian-vault": {
       "command": "C:\\Program Files\\nodejs\\node.exe",
-      "args": ["C:\\path\\to\\obsidian-mcp-perplexity\\dist\\index.js"],
+      "args": ["C:\\path\\to\\obsidian-mcp-server\\dist\\index.js"],
       "env": {
         "OBSIDIAN_MCP_CONFIG": "C:\\path\\to\\.obsidian-mcp\\config.json"
       }

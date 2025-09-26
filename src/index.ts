@@ -20,7 +20,7 @@ interface ObsidianConfig {
   enableIndexing?: boolean;
 }
 
-interface PerplexityResponse {
+interface MCPResponse {
   content: Array<{
     type: "text";
     text: string;
@@ -57,7 +57,7 @@ class ObsidianMCPServer {
   constructor() {
     this.server = new Server(
       {
-        name: "obsidian-mcp-perplexity",
+        name: "obsidian-mcp-server",
         version: "1.0.0",
       },
       {
@@ -77,7 +77,7 @@ class ObsidianMCPServer {
     if (typeof data === 'string') {
       text = data;
     } else if (data && typeof data === 'object') {
-      // Format structured data nicely for Perplexity
+      // Format structured data nicely for MCP
       if (data.error) {
         text = `Error: ${data.error}`;
       } else {
