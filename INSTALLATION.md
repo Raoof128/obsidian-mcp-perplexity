@@ -16,8 +16,8 @@ This is the easiest way to get started:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Raoof128/obsidian-mcp-perplexity.git
-cd obsidian-mcp-perplexity
+git clone https://github.com/Raoof128/obsidian-mcp-server.git
+cd obsidian-mcp-server
 
 # 2. Install dependencies
 npm install
@@ -41,8 +41,8 @@ Build and install as a Claude Desktop extension:
 
 ```bash
 # 1. Clone and build
-git clone https://github.com/Raoof128/obsidian-mcp-perplexity.git
-cd obsidian-mcp-perplexity
+git clone https://github.com/Raoof128/obsidian-mcp-server.git
+cd obsidian-mcp-server
 npm install
 npm run build-extension
 
@@ -60,8 +60,8 @@ For advanced users who want full control:
 #### Step 1: Build the Project
 
 ```bash
-git clone https://github.com/Raoof128/obsidian-mcp-perplexity.git
-cd obsidian-mcp-perplexity
+git clone https://github.com/Raoof128/obsidian-mcp-server.git
+cd obsidian-mcp-server
 npm install
 npm run build
 ```
@@ -98,7 +98,7 @@ Edit your Claude Desktop configuration file:
   "mcpServers": {
     "obsidian-vault": {
       "command": "node",
-      "args": ["/full/path/to/obsidian-mcp-perplexity/dist/index.js"],
+      "args": ["/full/path/to/obsidian-mcp-server/dist/index.js"],
       "env": {
         "OBSIDIAN_MCP_CONFIG": "/path/to/.obsidian-mcp/config.json"
       }
@@ -202,7 +202,7 @@ Your `claude_desktop_config.json` should look like:
   "mcpServers": {
     "obsidian-vault": {
       "command": "node",
-      "args": ["/path/to/obsidian-mcp-perplexity/dist/index.js"],
+      "args": ["/path/to/obsidian-mcp-server/dist/index.js"],
       "env": {
         "OBSIDIAN_MCP_CONFIG": "/path/to/.obsidian-mcp/config.json"
       }
@@ -254,14 +254,14 @@ Configure multiple vaults by creating separate MCP servers:
   "mcpServers": {
     "obsidian-work": {
       "command": "node",
-      "args": ["/path/to/obsidian-mcp-perplexity/dist/index.js"],
+      "args": ["/path/to/obsidian-mcp-server/dist/index.js"],
       "env": {
         "OBSIDIAN_MCP_CONFIG": "/path/to/work-vault-config.json"
       }
     },
     "obsidian-personal": {
       "command": "node",
-      "args": ["/path/to/obsidian-mcp-perplexity/dist/index.js"],
+      "args": ["/path/to/obsidian-mcp-server/dist/index.js"],
       "env": {
         "OBSIDIAN_MCP_CONFIG": "/path/to/personal-vault-config.json"
       }
@@ -272,8 +272,8 @@ Configure multiple vaults by creating separate MCP servers:
 
 ## Getting Help
 
-- **Issues**: [GitHub Issues](https://github.com/Raoof128/obsidian-mcp-perplexity/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/Raoof128/obsidian-mcp-perplexity/discussions)
+- **Issues**: [GitHub Issues](https://github.com/Raoof128/obsidian-mcp-server/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Raoof128/obsidian-mcp-server/discussions)
 - **Documentation**: See README.md for usage examples
 
 ## Updates
@@ -281,7 +281,7 @@ Configure multiple vaults by creating separate MCP servers:
 To update to the latest version:
 
 ```bash
-cd obsidian-mcp-perplexity
+cd obsidian-mcp-server
 git pull
 npm install
 npm run build

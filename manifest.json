@@ -5,8 +5,8 @@
   "description": "Advanced Obsidian vault integration for Claude Desktop. Features fuzzy search, note creation/editing, tag-based filtering, vault analytics, and comprehensive knowledge management tools.",
   "publisher": "Obsidian MCP Community",
   "license": "MIT",
-  "homepage": "https://github.com/Raoof128/obsidian-mcp-perplexity",
-  "repository": "https://github.com/Raoof128/obsidian-mcp-perplexity",
+  "homepage": "https://github.com/Raoof128/obsidian-mcp-server",
+  "repository": "https://github.com/Raoof128/obsidian-mcp-server",
   "keywords": [
     "obsidian",
     "notes",

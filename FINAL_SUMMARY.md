@@ -7,7 +7,7 @@ Your Obsidian MCP Server has been **completely transformed** from a basic integr
 ## 🚀 **What Was Delivered**
 
 ### **1. Claude Desktop Integration ✅**
-- ✅ Removed all Perplexity references
+- ✅ Full Claude Desktop integration
 - ✅ Added to Claude Desktop configuration
 - ✅ Created automated setup scripts
 - ✅ Built extension packaging system

@@ -8,13 +8,13 @@ Your Obsidian MCP Server is now fully configured and running with Claude Desktop
 2. **✅ Created Configuration**: Vault path set to your iCloud Obsidian folder
 3. **✅ Updated Claude Desktop**: Added to your `claude_desktop_config.json`
 4. **✅ Tested All Features**: All 5 MCP tools are working perfectly
-5. **✅ Removed Perplexity References**: Clean Claude Desktop integration
+5. **✅ Removed Claude Desktop References**: Clean Claude Desktop integration
 
 ## 🔧 Configuration Details
 
 - **Vault Path**: `/Users/raoof.r12/Library/Mobile Documents/iCloud~md~obsidian/Documents`
 - **Notes Found**: 8 notes (0.1MB total)
-- **Configuration File**: `/Users/raoof.r12/Desktop/Raouf/obsidian-mcp-perplexity/.obsidian-mcp-config.json`
+- **Configuration File**: `.obsidian-mcp-config.json`
 - **Claude Desktop Config**: Updated with `obsidian-vault` server
 
 ## 🎮 Ready to Use Commands

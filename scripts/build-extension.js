@@ -238,7 +238,7 @@ class ExtensionBuilder {
     console.log('• Built code: dist/\n');
 
     console.log('🆘 Need help? Check the documentation or report issues at:');
-    console.log('https://github.com/Raoof128/obsidian-mcp-perplexity/issues');
+    console.log('https://github.com/Raoof128/obsidian-mcp-server/issues');
   }
 }
 

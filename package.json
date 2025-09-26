@@ -1,5 +1,5 @@
 {
-  "name": "obsidian-mcp-perplexity",
+  "name": "obsidian-mcp-server",
   "version": "1.0.0",
   "description": "MCP server for Obsidian vault integration with Claude Desktop",
   "main": "dist/index.js",
@@ -39,10 +39,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Raoof128/obsidian-mcp-perplexity.git"
+    "url": "https://github.com/Raoof128/obsidian-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/Raoof128/obsidian-mcp-perplexity/issues"
+    "url": "https://github.com/Raoof128/obsidian-mcp-server/issues"
   },
-  "homepage": "https://github.com/Raoof128/obsidian-mcp-perplexity#readme"
+  "homepage": "https://github.com/Raoof128/obsidian-mcp-server#readme"
 }

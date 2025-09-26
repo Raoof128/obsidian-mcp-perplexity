@@ -17,8 +17,8 @@ A Model Context Protocol (MCP) server for Obsidian vault integration. Search and
 
 1. **Build the Extension**:
    ```bash
-   git clone https://github.com/Raoof128/obsidian-mcp-perplexity.git
-   cd obsidian-mcp-perplexity
+   git clone https://github.com/Raoof128/obsidian-mcp-server.git
+   cd obsidian-mcp-server
    npm install
    npm run build-extension
    ```
@@ -106,7 +106,7 @@ The server works with any MCP-compatible client. Add to your MCP configuration:
   "mcpServers": {
     "obsidian-vault": {
       "command": "node",
-      "args": ["path/to/obsidian-mcp-perplexity/dist/index.js"],
+      "args": ["path/to/obsidian-mcp-server/dist/index.js"],
       "env": {
         "OBSIDIAN_MCP_CONFIG": "path/to/config.json"
       }
