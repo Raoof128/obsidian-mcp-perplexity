@@ -9,6 +9,7 @@ import {
 import { promises as fs } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { resolveInVault } from "./vault-path.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -798,17 +799,7 @@ class ObsidianMCPServer {
     const { notePath, includeMetadata = true } = args;
 
     // Handle both absolute and relative paths
-    let fullPath: string;
-    if (path.isAbsolute(notePath)) {
-      fullPath = notePath;
-    } else {
-      fullPath = path.resolve(this.config!.obsidianVaultPath, notePath);
-    }
-
-    // Security check - ensure path is within vault
-    if (!fullPath.startsWith(path.resolve(this.config!.obsidianVaultPath))) {
-      throw new Error("Path traversal not allowed - path must be within vault");
-    }
+    let fullPath = resolveInVault(this.config!.obsidianVaultPath, notePath);
 
     // Add .md extension if not present
     if (!fullPath.endsWith('.md')) {
@@ -921,16 +912,7 @@ class ObsidianMCPServer {
   private async getNoteLinks(args: any) {
     const { notePath, includeBacklinks = true } = args;
 
-    let fullPath: string;
-    if (path.isAbsolute(notePath)) {
-      fullPath = notePath;
-    } else {
-      fullPath = path.resolve(this.config!.obsidianVaultPath, notePath);
-    }
-
-    if (!fullPath.startsWith(path.resolve(this.config!.obsidianVaultPath))) {
-      throw new Error("Path traversal not allowed");
-    }
+    let fullPath = resolveInVault(this.config!.obsidianVaultPath, notePath);
 
     if (!fullPath.endsWith('.md')) {
       fullPath += '.md';
@@ -1022,17 +1004,7 @@ class ObsidianMCPServer {
   private async createNote(args: any) {
     const { notePath, content, tags = [], overwrite = false } = args;
 
-    let fullPath: string;
-    if (path.isAbsolute(notePath)) {
-      fullPath = notePath;
-    } else {
-      fullPath = path.resolve(this.config!.obsidianVaultPath, notePath);
-    }
-
-    // Security check
-    if (!fullPath.startsWith(path.resolve(this.config!.obsidianVaultPath))) {
-      throw new Error("Path traversal not allowed");
-    }
+    let fullPath = resolveInVault(this.config!.obsidianVaultPath, notePath);
 
     // Add .md extension if not present
     if (!fullPath.endsWith('.md')) {
@@ -1079,16 +1051,7 @@ class ObsidianMCPServer {
   private async updateNote(args: any) {
     const { notePath, content, append = false, preserveFrontmatter = true } = args;
 
-    let fullPath: string;
-    if (path.isAbsolute(notePath)) {
-      fullPath = notePath;
-    } else {
-      fullPath = path.resolve(this.config!.obsidianVaultPath, notePath);
-    }
-
-    if (!fullPath.startsWith(path.resolve(this.config!.obsidianVaultPath))) {
-      throw new Error("Path traversal not allowed");
-    }
+    let fullPath = resolveInVault(this.config!.obsidianVaultPath, notePath);
 
     if (!fullPath.endsWith('.md')) {
       fullPath += '.md';

@@ -19,3 +19,9 @@ Thumbs.db
 # Config files (keep templates)
 config.json
 !config/default.json
+
+# A local vault configuration holds a path on your machine. Keep it out of Git.
+.obsidian-mcp-config.json
+extension/
+*.mcpb
+obsidian-mcp-server.zip
