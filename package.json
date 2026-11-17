@@ -1,7 +1,7 @@
 {
   "name": "obsidian-mcp-server",
   "version": "1.0.0",
-  "description": "MCP server for Obsidian vault integration with Claude Desktop",
+  "description": "MCP server for an Obsidian vault: search, read, link analysis, and note creation and update",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
@@ -15,7 +15,8 @@
     "setup": "node scripts/setup.js",
     "setup-claude-desktop": "node scripts/setup-claude-desktop.js",
     "build-extension": "node scripts/build-extension.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "test:unit": "npm run build && node --test test/vault-path.test.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0"
@@ -35,14 +36,14 @@
     "ai",
     "knowledge-management"
   ],
-  "author": "Your Name",
+  "author": "Raoof128",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Raoof128/obsidian-mcp-server.git"
+    "url": "https://github.com/Raoof128/obsidian-mcp-perplexity.git"
   },
   "bugs": {
-    "url": "https://github.com/Raoof128/obsidian-mcp-server/issues"
+    "url": "https://github.com/Raoof128/obsidian-mcp-perplexity/issues"
   },
-  "homepage": "https://github.com/Raoof128/obsidian-mcp-server#readme"
+  "homepage": "https://github.com/Raoof128/obsidian-mcp-perplexity#readme"
 }

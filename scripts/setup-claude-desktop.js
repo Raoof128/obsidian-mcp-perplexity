@@ -295,7 +295,7 @@ Happy note-taking!
     console.log('• If you don\'t see the MCP indicator, check that Claude Desktop is fully restarted');
     console.log('• Verify the vault path is correct and accessible');
     console.log('• Check the Claude Desktop logs for any error messages');
-    console.log('• Report issues at: https://github.com/Raoof128/obsidian-mcp-server/issues\n');
+    console.log('• Report issues at: https://github.com/Raoof128/obsidian-mcp-perplexity/issues\n');
 
     const platform = os.platform();
     if (platform === 'darwin') {
